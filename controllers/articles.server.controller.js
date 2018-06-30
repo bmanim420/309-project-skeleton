@@ -102,3 +102,10 @@ module.exports.new = function(req, res){
         });
 };
 
+module.exports.edit = function(req, res) {
+	res.render('./../public/views/article/edit.ejs', {
+		user: req.user || null,
+		article: req.article
+	});
+};
+
